@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bms-app
+  labels:
+    app: bms
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bms
+  template:
+    metadata:
+      labels:
+        app: bms
+    spec:
+      containers:
+      - name: bms-container
+        image: vishalk15v/book-my-show
+        ports:
+        - containerPort: 3000
