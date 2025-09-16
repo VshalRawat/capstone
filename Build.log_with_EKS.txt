@@ -1,7 +1,7 @@
 Started by user Vishal Kumar
 [Pipeline] Start of Pipeline
 [Pipeline] node
-Running on Jenkins in /var/lib/jenkins/workspace/Book-MyShow-DevOps-Capstone
+Running on Jenkins in /var/lib/jenkins/workspace/Book-MyShow
 [Pipeline] {
 [Pipeline] tool
 [Pipeline] withEnv
@@ -45,7 +45,7 @@ The recommended git tool is: NONE
 No credentials specified
 Cloning the remote Git repository
 Cloning repository https://github.com/VshalRawat/Book-My-Show.git
- > git init /var/lib/jenkins/workspace/Sejal-BMS-K8S # timeout=10
+ > git init /var/lib/jenkins/workspace/VshalRawat # timeout=10
 Fetching upstream changes from https://github.com/VshalRawat/Book-My-Show.git
  > git --version # timeout=10
  > git --version # 'git version 2.43.0'
@@ -770,16 +770,16 @@ service/bms-service configured
 + echo Verifying deployment...
 Verifying deployment...
 + kubectl get pods
-NAME                                        READY   STATUS        RESTARTS   AGE
-bms-app-695b77b4cb-r9sj7                    1/1     Terminating   0          150m
-bms-app-7bf5b78bcd-8jd4f                    1/1     Running       0          13m
-bms-app-7bf5b78bcd-qf94t                    1/1     Running       0          13m
-bms-deployment-84d65f99f9-75qhf             1/1     Running       0          94m
-bms-deployment-84d65f99f9-bdfjg             1/1     Running       0          94m
-prometheus-prometheus-node-exporter-862hn   1/1     Terminating   0          78m
+NAME                                           READY   STATUS        RESTARTS   AGE
+Book-MyShow-695b77b4cb-r9sj7                    1/1     Terminating   0          150m
+Book-MyShow-7bf5b78bcd-8jd4f                    1/1     Running       0          13m
+Book-MyShow-7bf5b78bcd-qf94t                    1/1     Running       0          13m
+Book-MyShow-deployment-84d65f99f9-75qhf         1/1     Running       0          94m
+Book-MyShow-deployment-84d65f99f9-bdfjg         1/1     Running       0          94m
+prometheus-prometheus-node-exporter-862hn       1/1     Terminating   0          78m
 + kubectl get svc
 NAME          TYPE           CLUSTER-IP      EXTERNAL-IP                                                              PORT(S)        AGE
-bms-service   LoadBalancer   10.100.252.43   a6bcb5c45ac844237870fc4685bf06ed-993276435.eu-north-1.elb.amazonaws.com   80:31999/TCP   168m
+Book-MyShow-service   LoadBalancer   10.100.252.43   a6bcb5c45ac844237870fc4685bf06ed-993276435.eu-north-1.elb.amazonaws.com   80:31999/TCP   168m
 kubernetes    ClusterIP      10.100.0.1      <none>                                                                   443/TCP        5h35m
 [Pipeline] }
 [Pipeline] // script
